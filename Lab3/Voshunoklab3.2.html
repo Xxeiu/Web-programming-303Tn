@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: beige;
+            background-color: beige; /* Бежевий фон сторінки */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,37 +17,37 @@
         }
         table {
             width: 80%;
-            border-collapse: collapse;
-            border: 3px double #000;
+            border-collapse: collapse; /* Для об'єднання границь комірок */
+            border: 3px double #000; /* Подвоєна рамка таблиці */
             background-color: #fff;
         }
         th, td {
-            border: 2px solid #000; 
+            border: 2px solid #000; /* Рамка для комірок */
             padding: 10px;
-            text-align: center; 
+            text-align: center; /* Вирівнювання тексту по центру */
         }
         th {
-            background-color: #dcdcdc; 
+            background-color: #dcdcdc; /* Світлий фон для заголовків */
         }
         tr:nth-child(even) {
-            background-color: #f9f9f9; 
+            background-color: #f9f9f9; /* Послідовність рядків із сірим фоном */
         }
     </style>
 </head>
 <body>
     <table>
         <tbody>
-            
+            <!-- Перший рядок з об'єднанням комірок 1.1 і 1.2 та комірок 2.1 і 2.2 -->
             <tr>
                 <td colspan="2" rowspan="2"></td>
                 <td colspan="2" style="text-align: left;">Характеристики</td>
             </tr>
-            
+            <!-- Другий рядок, решта комірок -->
             <tr>
                 <td style="text-align: left;">Кількість студентів</td>
                 <td style="text-align: left;">Якість успішність</td>
             </tr>
-            
+            <!-- Третій рядок, з об'єднанням комірок 3.1 з 4.1 і 5.1 -->
             <tr>
                 <td rowspan="3">Спеціальність</td>
                 <td>Комп'ютерна інженарія</td>
