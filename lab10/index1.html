@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>lab10-1</title>
+</head>
+
+<body>
+    <button onclick="showFileCreatedDate()">Показати дату створення файла</button>
+
+    <script>
+        function showFileCreatedDate() {
+            const fileCreatedDate = new Date(document.lastModified);
+            alert("Дата створення файла: " + fileCreatedDate);
+        }
+    </script>
+</body>
+
+</html>

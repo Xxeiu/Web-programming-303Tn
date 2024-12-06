@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab10-2</title>
+</head>
+
+<body>
+    <p>ВВЕДІТЬ ВАШЕ ІМ’Я: <input type="text" id="myName"></p>
+    <input onclick="showGreeting()" type="button" value="OK">
+
+    <script>
+        function showGreeting() {
+            var myNameInput = document.getElementById("myName").value;
+
+            var greetingContainer = document.createElement("div");
+            greetingContainer.style.backgroundColor = "#ffccff";
+            greetingContainer.style.color = "#990099";
+            greetingContainer.style.textAlign = "center";
+            greetingContainer.innerHTML = '<h3>Добрий день, ' + myNameInput + '</h3>';
+
+            document.body.appendChild(greetingContainer);
+        }
+    </script>
+</body>
+
+</html>

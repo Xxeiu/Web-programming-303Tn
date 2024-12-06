@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lab10-5</title>
+</head>
+<body>
+    <td align="middle">
+        <input type="button" value="Викличемо метод prompt" onclick="getName()">
+        <input type="button" value="Переглянемо введену інформацію" onclick="showName()">
+    </td>
+
+    <script>
+        let userName = '';  // Змінна для збереження імені користувача
+
+        function getName() {
+            userName = prompt('Введіть Ваше ім\'я');
+        }
+
+        function showName() {
+            if (userName) {
+                alert('Ви ввели ім\'я: ' + userName);
+            } else {
+                alert('Ви не ввели ім\'я.');
+            }
+        }
+    </script>
+</body>
+</html>
