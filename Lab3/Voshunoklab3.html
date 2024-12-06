@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voshunoklab3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        table {
+            width: 75%;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .left-align {
+            text-align: left;
+        }
+        .right-align {
+            text-align: right;
+        }
+        .center {
+            text-align: center;
+        }
+        .col-25 {
+            width: 25%;
+        }
+        .col-75 {
+            width: 75%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Строка с заголовком -->
+        <tr>
+            <td colspan="2" class="center">Заголовок</td>
+        </tr>
+        <!-- Первая строка с выравниванием -->
+        <tr>
+            <td class="left-align col-25">Дані, вирівняні по лівому краю комірки</td>
+            <td class="right-align col-75">Дані вирівняні по правому краю комірки</td>
+        </tr>
+        <!-- Вторая строка с шириной ячеек -->
+        <tr>
+            <td class="center col-25">25% ширини таблиці</td>
+            <td class="center col-75">75% ширини таблиці</td>
+        </tr>
+    </table>
+</body>
+</html>

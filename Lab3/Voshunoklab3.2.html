@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voshunoklab3.2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: beige; /* Бежевый фон страницы */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse; /* Для объединения границ ячеек */
+            border: 3px double #000; /* Двойная рамка таблицы */
+            background-color: #fff;
+        }
+        th, td {
+            border: 2px solid #000; /* Рамка для ячеек */
+            padding: 10px;
+            text-align: center; /* Выравнивание текста по центру */
+        }
+        th {
+            background-color: #dcdcdc; /* Светлый фон для заголовков */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Чередование строк с серым фоном */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <!-- Первая строка с объединением ячеек 1.1 и 1.2 и ячеек 2.1 и 2.2 -->
+            <tr>
+                <td colspan="2" rowspan="2"></td>
+                <td colspan="2" style="text-align: left;">Характеристики</td>
+            </tr>
+            <!-- Вторая строка, оставшиеся ячейки -->
+            <tr>
+                <td style="text-align: left;">Кількість студентів</td>
+                <td style="text-align: left;">Якість успішність</td>
+            </tr>
+            <!-- Третья строка, с объединением ячейки 3.1 с 4.1 и 5.1 -->
+            <tr>
+                <td rowspan="3">Спеціальність</td>
+                <td>Комп'ютерна інженарія</td>
+                <td style="text-align: center;">250</td>
+                <td style="text-align: center;">80%</td>
+            </tr>
+            <tr>
+                <td>Телекомунікації та радіотехніка</td>
+                <td style="text-align: center;">200</td>
+                <td style="text-align: center;">75%</td>
+            </tr>
+            <tr>
+                <td>Електромеханіка</td>
+                <td style="text-align: center;">150</td>
+                <td style="text-align: center;">85%</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voshunoklab7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        table {
+            width: 60%; /* Зменшена ширина */
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Форма замовлення товару</h1>
+    <form action="/submit_order" method="post">
+        <table>
+            <!-- Поле вводу номера банківського рахунку -->
+            <tr>
+                <th><label for="account-number">Номер банківського рахунку:</label></th>
+                <td><input type="text" id="account-number" name="account-number" required></td>
+            </tr>
+            <!-- Поле вводу особистого номера користувача -->
+            <tr>
+                <th><label for="user-id">Особистий номер користувача:</label></th>
+                <td><input type="text" id="user-id" name="user-id" required></td>
+            </tr>
+            <!-- Список товарів -->
+            <tr>
+                <th><label for="products">Оберіть товари:</label></th>
+                <td>
+                    <select id="products" name="products[]" multiple>
+                        <option value="product1">Товар 1</option>
+                        <option value="product2">Товар 2</option>
+                        <option value="product3">Товар 3</option>
+                        <option value="product4">Товар 4</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- Поле вводу коментарів -->
+            <tr>
+                <th><label for="comments">Коментарі:</label></th>
+                <td><textarea id="comments" name="comments" rows="4" cols="50" placeholder="Напишіть свої коментарі тут..."></textarea></td>
+            </tr>
+            <!-- Вид оплати -->
+            <tr>
+                <th>Оберіть вид оплати:</th>
+                <td>
+                    <input type="radio" id="cash" name="payment-type" value="cash" required>
+                    <label for="cash">Готівковий розрахунок</label><br>
+                    <input type="radio" id="cashless" name="payment-type" value="cashless">
+                    <label for="cashless">Безготівковий розрахунок</label>
+                </td>
+            </tr>
+            <!-- Додаткова інформація -->
+            <tr>
+                <th>Додаткова інформація:</th>
+                <td>
+                    <input type="checkbox" id="account-balance" name="additional-info[]" value="account-balance">
+                    <label for="account-balance">Дані про залишки на рахунку</label><br>
+                    <input type="checkbox" id="last-payments" name="additional-info[]" value="last-payments">
+                    <label for="last-payments">Список останніх виплат по рахунку</label>
+                </td>
+            </tr>
+        </table>
+        <!-- Кнопка відправки -->
+        <button type="submit">Надіслати замовлення</button>
+    </form>
+</body>
+</html>
